@@ -1,0 +1,17 @@
+<h1><%= @entries.title %></h1>
+
+<p> <%= @entries.body %></p>
+
+<footer>The Author: <%= @entries.author %></footer>
+
+
+<h2> <a href="/entries/<%= @entries.id %>/edit">Edit this Entry</a></h2>
+
+<form action="/entries/<%= @entries.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="EDLETE THIS ENTRY">
+</form>
+
+
+
+<h3> <a href="/entries/index">Return to last entries</a></h3>

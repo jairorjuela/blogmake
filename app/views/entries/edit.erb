@@ -1,0 +1,17 @@
+<h1> Edit <%= @entries.title %></h1>
+  <% if @errors %>
+  <ul>
+    <% @errors.each do |error| %>
+    <li><%= error %></li>
+    <% error %>
+    <%end%>
+  </ul>
+  <%end%>
+
+  <form action="/entries/<%= @entries.id %>" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <input type="text" name="entry[title]" placeholder="title">
+    <input type="text" name="entry[author]" placeholder="author">
+    <input type="text" name="entry[body]" placeholder="body">
+  <input type="submit" value="Edit!!">
+  </form>
